@@ -1,6 +1,9 @@
 package with_virtual_nodes;
 
 
+import common.FNVHash;
+import common.Server;
+
 import java.security.NoSuchAlgorithmException;
 import java.text.NumberFormat;
 import java.util.LinkedList;

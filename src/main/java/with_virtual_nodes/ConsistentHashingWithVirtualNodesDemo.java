@@ -1,5 +1,7 @@
 package with_virtual_nodes;
 
+import common.Server;
+
 import java.security.NoSuchAlgorithmException;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -22,18 +24,12 @@ public class ConsistentHashingWithVirtualNodesDemo {
 
         serverDistributor.addServerToHashRing("10.0.0.3");
 
-        String key = "Sun";
-        Server serverForKey = serverDistributor.getServer(key);
-        System.out.println(("without_virtual_nodes.Server: " + serverForKey + " holds key: " + key + "\n"));
+        String[] keys = new String[]{"Sun", "Moon", "facebookfacebookfacebookzzzz"};
+        for (String key : keys) {
+            Server serverForKey = serverDistributor.getServer(key);
+            System.out.println(("without_virtual_nodes.Server: " + serverForKey + " holds key: " + key + "\n"));
+        }
 
-        key = "Moon";
-        serverForKey = serverDistributor.getServer(key);
-        System.out.println(("without_virtual_nodes.Server: " + serverForKey + " holds key: " + key + "\n"));
-        //serverDistributor.removeServerFromHashRing(serverForKey);
-
-        key = "facebookfacebookfacebookzzzz";
-        serverForKey = serverDistributor.getServer(key);
-        System.out.println(("without_virtual_nodes.Server: " + serverForKey + " holds key: " + key + "\n"));
 
     }
 }

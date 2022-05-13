@@ -1,4 +1,4 @@
-package with_virtual_nodes;
+package common;
 
 public class Server {
     public String ipAddress;

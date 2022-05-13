@@ -1,4 +1,4 @@
-package without_virtual_nodes;
+package common;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;

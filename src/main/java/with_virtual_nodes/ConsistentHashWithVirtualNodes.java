@@ -1,6 +1,5 @@
 package with_virtual_nodes;
 
-import org.junit.platform.commons.util.StringUtils;
 
 import java.security.NoSuchAlgorithmException;
 import java.text.NumberFormat;
